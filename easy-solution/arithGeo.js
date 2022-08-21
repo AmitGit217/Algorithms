@@ -1,23 +1,20 @@
 function arithGeo(arr) {
-    const notGeo = [];
-    const notArith = [];
-    for (let i = 0; i < arr.length; i++) {
-        const arithmetic = arr[1] - arr[0];
-        const geometric = arr[1] / arr[0];
-        const notLastIndex = arr[i] != arr[arr.length - 1];
-        if (notLastIndex) {
-            if (arr[i + 1] - arr[i] != arithmetic) {
-                notArith.push("false");
-            }
-            if (arr[i + 1] / arr[i] != geometric) {
-                notGeo.push("false");
-            }
-        }
+    let isArith = true;
+    let isGeo = true;
+
+    const geometric = arr[1] / arr[0];
+    const arithmetic = arr[1] - arr[0];
+
+    for (let i = 1; i < arr.length - 1 && (isArith || isGeo); i++) {
+        isGeo = isGeo && arr[i + 1] / arr[i] == geometric;
+        isArith = isArith && arr[i + 1] - arr[i] == arithmetic;
     }
-    if (!notGeo.length && notArith.length) {
+
+    if (isArith && isGeo) {
+        return -1;
+    } else if (isGeo) {
         return "Geometric";
-    }
-    if (notGeo.length && !notArith.length) {
+    } else if (isArith) {
         return "Arithmetic";
     } else {
         return -1;
