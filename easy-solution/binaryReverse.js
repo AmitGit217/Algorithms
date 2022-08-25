@@ -10,6 +10,7 @@ function binaryReversal(str) {
         return toBinaryRecursion(Math.floor(n));
     }
     toBinaryRecursion(number);
+
     while (unicode.length % 8 != 0) {
         unicode.unshift(0);
     }
