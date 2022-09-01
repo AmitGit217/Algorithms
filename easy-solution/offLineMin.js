@@ -1,7 +1,7 @@
 function offLineMinimum(strArr) {
     const result = [];
     let relativeMin = strArr[0];
-    for (let i = 0; i < strArr.length + 1; i++) {
+    for (let i = 0; i < strArr.length; i++) {
         let indexOfMin = strArr.indexOf(relativeMin);
         if (strArr[i] < relativeMin) {
             relativeMin = strArr[i];
