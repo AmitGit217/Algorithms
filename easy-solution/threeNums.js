@@ -5,12 +5,12 @@ function threeNumbers(str) {
     for (let numbers of numbersArr) {
         let digits = numbers.join("").split("");
         const threeAdjacent = numbers.length < 2;
-        const notExactlyThreeNums = digits.length !== 3;
+        const notExactlyThreeNumbers = digits.length !== 3;
         const twoNumbersAreEqual =
             digits[0] === digits[1] ||
             digits[0] === digits[2] ||
             digits[1] == digits[2];
-        if (threeAdjacent || notExactlyThreeNums || twoNumbersAreEqual) {
+        if (threeAdjacent || notExactlyThreeNumbers || twoNumbersAreEqual) {
             return false;
         }
     }
