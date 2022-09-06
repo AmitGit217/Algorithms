@@ -1,24 +1,24 @@
-function countingMin(str) {
-    let hashMap = {};
+function countingMin(str: string) {
     let timeArr = str.split("-");
     let start = timeArr[0].split(":");
     let end = timeArr[1].split(":");
 
-    hashMap["start"] = {
-        hours: parseInt(start[0]),
-        minutes: parseInt(start[1].slice(0, 2)),
-        dayTime: start[1].slice(2),
+    let hashMap = {
+        start: {
+            hours: parseInt(start[0]),
+            minutes: parseInt(start[1].slice(0, 2)),
+            dayTime: start[1].slice(2),
+        },
+        end: {
+            hours: parseInt(end[0]),
+            minutes: parseInt(end[1].slice(0, 2)),
+            dayTime: end[1].slice(2),
+        },
+        gap: {
+            hours: 0,
+            minutes: 0,
+        },
     };
-    hashMap["end"] = {
-        hours: parseInt(end[0]),
-        minutes: parseInt(end[1].slice(0, 2)),
-        dayTime: end[1].slice(2),
-    };
-    hashMap["gap"] = {
-        hours: 0,
-        minutes: 0,
-    };
-
     //Convert to 24 model
     if (hashMap.start.dayTime == "pm" && hashMap.start.hours < 12) {
         hashMap.start.hours += 12;

@@ -1,6 +1,6 @@
-function productDigits(num) {
+function productDigits(num: number) {
     let firstNum = num;
-    const results = [];
+    const results: number[] = [];
     while (firstNum >= 1) {
         let secondNum = num / firstNum;
         if (num % firstNum == 0) {

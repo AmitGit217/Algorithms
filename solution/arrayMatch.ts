@@ -1,5 +1,5 @@
-function arrayMatching(strArr) {
-    const result = [];
+function arrayMatching(strArr: string[]) {
+    const result: number[] = [];
     const firstArr = strArr[0].replace(/[\][,]/g, "").split(" ");
     const secondArr = strArr[1].replace(/[\][,]/g, "").split(" ");
     const length = firstArr.concat(secondArr).length;

@@ -1,4 +1,4 @@
-function overlappingRanges(arr) {
+function overlappingRanges(arr: number[]) {
     const overLapSet = new Set();
     const firstArr = arr.slice(0, 2);
     const secondArr = arr.slice(2, 4);
@@ -11,5 +11,5 @@ function overlappingRanges(arr) {
             counter++;
         }
     }
-    return counter >= arr.pop() ? true : false;
+    return counter >= arr[arr.length - 1] ? true : false;
 }

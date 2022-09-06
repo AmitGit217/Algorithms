@@ -1,5 +1,5 @@
-function simpleSymbol(str) {
-    let state = [];
+function simpleSymbol(str: string) {
+    let state: string[] = [];
     let alphabetString = "abcdefghijklmnopqrstuvwxyz";
     let alphabet = alphabetString.split("");
     let strArr = str.split("");

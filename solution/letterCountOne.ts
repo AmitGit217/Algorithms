@@ -1,4 +1,4 @@
-function letterCountOne(str) {
+function letterCountOne(str: string) {
     let maxNum = 0;
     let biggest = -1;
     const strArr = str.split(" ");
@@ -14,7 +14,7 @@ function letterCountOne(str) {
                 wordValues[itemArr[i]] = 0;
             }
         }
-        const wordValuesArr = Object.values(wordValues);
+        const wordValuesArr: number[] = Object.values(wordValues);
         words[item] = Math.max(...wordValuesArr);
     });
     const keys = Object.keys(words);
@@ -22,7 +22,7 @@ function letterCountOne(str) {
         const value = words[key];
         if (value > maxNum) {
             maxNum = value;
-            biggest = key;
+            biggest = parseInt(key);
         }
     });
     return biggest;

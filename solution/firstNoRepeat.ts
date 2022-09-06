@@ -1,4 +1,4 @@
-function nonRepeatingCharacter(str) {
+function nonRepeatingCharacter(str: string) {
     const strArr = str.replace(/ /gi, "").split("");
     const map = {};
     for (let i = 0; i < strArr.length; i++) {

@@ -1,4 +1,4 @@
-function timeConvert(num) {
+function timeConvert(num: number) {
     let hours = 0;
     let minutes = 0;
     for (let i = 0; i < num; i++) {

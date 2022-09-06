@@ -1,13 +1,13 @@
-function additivePersistence(num) {
+function additivePersistence(num: number) {
     const numbersArr = num.toString().split("");
-    function recurse(arr, counter) {
+    function recurse(arr: string[], counter: number) {
         counter = counter || 0;
         if (arr.length < 2) {
             return counter;
         } else {
-            arr = arr.reduce((a, b) => parseInt(a) + parseInt(b), 0);
-            return recurse(arr.toString().split(""), counter + 1);
+            const newArr = arr.reduce((a, b) => a + parseInt(b), 0);
+            return recurse(newArr.toString().split(""), counter + 1);
         }
     }
-    return recurse(numbersArr);
+    return recurse(numbersArr, 0);
 }

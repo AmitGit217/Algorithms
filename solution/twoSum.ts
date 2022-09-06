@@ -1,7 +1,7 @@
-function TwoSum(arr) {
+function TwoSum(arr: number[]) {
     const map = new Map();
-    const target = arr.shift();
-    const result = [];
+    const target = arr.shift() || 0;
+    const result: Array<number[]> = [];
     arr.forEach((number, index) => map.set(number, index));
     arr.forEach((number, index) => {
         const gap = target - number;

@@ -1,12 +1,12 @@
-function rectangleArea(strArr) {
-    const points = [];
+function rectangleArea(strArr: string[]) {
+    const points: Array<number[]> = [];
     for (let i = 0; i < strArr.length; i++) {
         strArr[i] = strArr[i].replace(/\-/gi, "");
         points.push([parseInt(strArr[i][1]), parseInt(strArr[i][3])]);
     }
     let height = 0;
     let width = 0;
-    let firstPoint = points.shift();
+    let firstPoint = points.shift() || 0;
     for (let i = 0; i < points.length; i++) {
         let pointX = points[i][0];
         let pointY = points[i][1];

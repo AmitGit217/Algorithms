@@ -1,4 +1,4 @@
-function simpleAdd(num) {
+function simpleAdd(num: number) {
     let counter = 1;
     let result = 1;
     while (counter < num) {

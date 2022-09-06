@@ -1,7 +1,7 @@
-function binaryReversal(str) {
+function binaryReversal(str: string) {
     let number = parseInt(str);
-    let unicode = [];
-    function toBinaryRecursion(n) {
+    let unicode: number[] = [];
+    function toBinaryRecursion(n: number) {
         if (n < 1) {
             return unicode;
         }

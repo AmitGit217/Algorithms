@@ -1,4 +1,4 @@
-function meanMode(arr) {
+function meanMode(arr: number[]) {
     let hashMap = {};
     const sum = arr.reduce((init, current) => init + current, 0);
     const mean = sum / arr.length;
@@ -12,5 +12,5 @@ function meanMode(arr) {
     const mode = Object.keys(hashMap).reduce((a, b) =>
         hashMap[a] > hashMap[b] ? a : b
     );
-    return mean == mode ? 1 : 0;
+    return mean == parseInt(mode) ? 1 : 0;
 }

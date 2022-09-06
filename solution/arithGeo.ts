@@ -1,4 +1,4 @@
-function arithGeo(arr) {
+function arithGeo(arr: number[]) {
     let isArith = true;
     let isGeo = true;
 

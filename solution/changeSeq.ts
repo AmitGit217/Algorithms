@@ -1,4 +1,4 @@
-function changeSequence(arr) {
+function changeSequence(arr: number[]) {
     let increasing = arr[1] > arr[0] ? true : false;
     let stateChange = false;
     let target = 0;

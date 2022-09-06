@@ -1,5 +1,5 @@
-function offLineMinimum(strArr) {
-    const result = [];
+function offLineMinimum(strArr: string[]) {
+    const result: string[] = [];
     let relativeMin = strArr[0];
     for (let i = 0; i < strArr.length; i++) {
         let indexOfMin = strArr.indexOf(relativeMin);

@@ -1,8 +1,8 @@
-function letterChange(str) {
+function letterChange(str: string) {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
     const alphabetArray = alphabet.split("");
     const strArray = str.split("");
-    const resultArray = [];
+    const resultArray: string[] = [];
     for (let i = 0; i < strArray.length; i++) {
         let strChar = strArray[i];
         for (let j = 0; j < alphabetArray.length; j++) {

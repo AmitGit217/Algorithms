@@ -1,8 +1,8 @@
-function ThreeSum(arr) {
-    const target = arr.shift();
+function ThreeSum(arr: number[]) {
+    const target = arr.shift() || 0;
     const hashTable = {};
-    const resultsArr = [];
-    const hitTarget = [];
+    const resultsArr: Array<number[]> = [];
+    const hitTarget: Array<number[]> = [];
     arr.forEach((number, index) => (hashTable[number] = index));
     arr.forEach((number, index) => {
         for (const objNumber in hashTable) {

@@ -1,7 +1,7 @@
-function closestEnemy(arr) {
+function closestEnemy(arr: number[]) {
     let me = arr[0];
     const enemyMap = {};
-    const results = [];
+    const results: number[] = [];
     arr.forEach((number, index) => {
         if (number == 1) {
             me = index;
@@ -11,7 +11,7 @@ function closestEnemy(arr) {
         }
     });
 
-    Object.keys(enemyMap).forEach((key) => {
+    Object.keys(enemyMap).forEach((key: any) => {
         results.push(Math.abs(me - key));
     });
     return results.length ? Math.min(...results) : 0;

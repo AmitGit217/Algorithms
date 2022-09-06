@@ -1,4 +1,4 @@
-function vowelSquare(strArr) {
+function vowelSquare(strArr: string[]) {
     const vowels = ["a", "e", "i", "o", "u"];
 
     for (let row = 0; row < strArr.length - 1; row++) {

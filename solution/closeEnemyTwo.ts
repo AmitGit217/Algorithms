@@ -1,6 +1,6 @@
-function closestEnemyII(arr) {
-    let player = [];
-    let enemies = [];
+function closestEnemyII(arr: Array<[number | string]>) {
+    let player: number[] = [];
+    let enemies: Array<number[]> = [];
     const rowSize = arr[0].length;
     const colSize = arr.length;
     for (let i = 0; i < arr.length; i++) {
@@ -10,7 +10,7 @@ function closestEnemyII(arr) {
         }
     }
 
-    let paths = [];
+    let paths: number[] = [];
     for (let i = 0; i < enemies.length; i++) {
         const enemy = enemies[i];
         const inRowDiff = Math.abs(player[1] - enemy[1]);
