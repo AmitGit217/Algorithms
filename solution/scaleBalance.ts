@@ -3,7 +3,10 @@ function ScaleBalancing(strArr: string[]) {
         .replace(/[\][]/gi, "")
         .split(",")
         .map((item) => parseInt(item));
-    const balance = strArr[1].replace(/[\][\s]/gi, "").split(",");
+    const balance = strArr[1]
+        .replace(/[\][\s]/gi, "")
+        .split(",")
+        .map((item) => parseInt(item));
     const smallNumber = Math.min(...scale);
     const bigNumber = Math.max(...scale);
     const smallResults = {};
@@ -12,8 +15,8 @@ function ScaleBalancing(strArr: string[]) {
     const result: number[] = [];
 
     for (let i = 0; i < balance.length; i++) {
-        const forSmall = parseInt(balance[i]) + smallNumber;
-        const forBig = parseInt(balance[i]) + bigNumber;
+        const forSmall = balance[i] + smallNumber;
+        const forBig = balance[i] + bigNumber;
         smallResults[forSmall] = balance[i];
         bigResults[forBig] = balance[i];
     }
@@ -21,7 +24,7 @@ function ScaleBalancing(strArr: string[]) {
         return smallResults[bigNumber];
     }
     balance.forEach((number) => {
-        const num = parseInt(number);
+        const num = number;
         const sum = bigNumber - num;
         mediumResult[sum] = num;
     });
