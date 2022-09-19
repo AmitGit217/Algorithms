@@ -10,7 +10,7 @@ function threeNumbers(str: string) {
             const twoNumbersAreEqual =
                 digits[0] === digits[1] ||
                 digits[0] === digits[2] ||
-                digits[1] == digits[2];
+                digits[1] === digits[2];
             if (threeAdjacent || notExactlyThreeNumbers || twoNumbersAreEqual) {
                 return false;
             }
