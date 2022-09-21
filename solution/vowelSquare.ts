@@ -1,16 +1,16 @@
 function vowelSquare(strArr: string[]) {
-    const vowels = ["a", "e", "i", "o", "u"];
+    const vowels = new Set<string>(["a", "e", "i", "o", "u"]);
 
     for (let row = 0; row < strArr.length - 1; row++) {
-        for (let column = 0; column < strArr[row].length - 1; column++) {
-            const topLeft = vowels.includes(strArr[row][column]);
-            const topRight = vowels.includes(strArr[row][column + 1]);
-            const downLeft = vowels.includes(strArr[row + 1][column]);
-            const downRight = vowels.includes(strArr[row + 1][column + 1]);
+        for (let col = 0; col < strArr[row].length - 1; col++) {
+            const topLeft = vowels.has(strArr[row][col]);
+            const topRight = vowels.has(strArr[row][col + 1]);
+            const downLeft = vowels.has(strArr[row + 1][col]);
+            const downRight = vowels.has(strArr[row + 1][col + 1]);
             const thereIsMatrix = topLeft && topRight && downLeft && downRight;
 
             if (thereIsMatrix) {
-                return `${row}-${column}`;
+                return `${row}-${col}`;
             }
         }
     }
