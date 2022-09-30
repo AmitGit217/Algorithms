@@ -42,6 +42,7 @@ class BinaryTree {
             }
         });
     }
+
     private findDoubleRoot() {
         this.nodes.forEach((item) => {
             if (!this.children.hasOwnProperty(item[1])) {
