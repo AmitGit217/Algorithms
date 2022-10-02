@@ -1,14 +1,5 @@
 // The main concept of "Stack" is the pop() & push(val) methods, there are a lot of ways to implement this kind of data structure.
 
-// 1. Array
-const arr: string[] = [];
-arr.push("a"); // ['a']
-arr.push("b"); // ['a','b']
-arr.length; // 2
-arr.pop(); // ['a']
-arr.length; // 1
-
-// 2. Linked list
 class StackNode {
     val: string | number;
     next: StackNode | null;
@@ -39,12 +30,14 @@ class Stack {
     }
 
     public pop() {
-        if (this.size === 1) {
-            this.top = null;
-            this.size--;
-        } else {
-            this.top = this.top?.next || null;
-            this.size--;
+        if (this.top) {
+            if (this.size === 1) {
+                this.top = null;
+                this.size--;
+            } else {
+                this.top = this.top.next || null;
+                this.size--;
+            }
         }
     }
 }
